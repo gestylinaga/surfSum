@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Surfer Ipsum</title>
+    <title>Surfer Ipsum - Gnarly filler text</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
   </head>
   <body>
-    <h1>surfSum</h1>
+    <a href="#main" class="skip">Skip to main content</a>
+    <a href="./" style="text-decoration: none">
+      <h1 style="margin: 1rem">surfSum</h1>
+    </a>
 
-    <div id="display">
+
+    <div id="main">
+      <div class="container">
+    <div id="display"></div>
+        <p>Sick surfer-slang filler text! 🤙</p>
+        
+        <div class="form">
+          <div>
+            <label for="paragraphs">Paragraphs:</label>
+            <input type="text" name="paragraphs" value="3" maxlength="2">
+          </div>
+
+          <div style="display: flex; gap: 1rem">
+            <p>Type:</p>
+            <div style="display: flex; flex-direction: column">
+              <div>
+                <input type="radio" name="type" value="surf" checked>
+                <label for="type">Clean, glassy surf</label>
+              </div>
+              <div>
+                <input type="radio" name="type" value="latin">
+                <label for="type">Messy, mixed with latin</label>
+              </div>
+              <div>
+                <input type="checkbox" name="sb" value="sb" checked>
+                <label for="sb">Start with "Shaka Brah!"</label>
+              </div>
+            </div>
+          </div>
+          
+          <button type="button">Drop in!</button>
+        </div>
+      </div>
+      
     </div>
   
     <script src="./js/surfWords.js"></script>
