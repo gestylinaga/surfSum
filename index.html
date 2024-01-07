@@ -16,13 +16,15 @@
 
     <div id="main">
       <div class="container">
-    <div id="display"></div>
+
+        <div id="display"></div>
+
         <p>Sick surfer-slang filler text! 🤙</p>
         
-        <div class="form">
+        <form action="javascript: handleClick()">
           <div>
             <label for="paragraphs">Paragraphs:</label>
-            <input type="text" name="paragraphs" value="3" maxlength="2">
+            <input id="paragraph-num" type="text" name="paragraphs" value="3" maxlength="2">
           </div>
 
           <div style="display: flex; gap: 1rem">
@@ -37,14 +39,13 @@
                 <label for="type">Messy, mixed with latin</label>
               </div>
               <div>
-                <input type="checkbox" name="sb" value="sb" checked>
+                <input type="checkbox" name="sb" value="sb" id="checkbox" checked>
                 <label for="sb">Start with "Shaka Brah!"</label>
               </div>
             </div>
           </div>
-          
-          <button type="button">Drop in!</button>
-        </div>
+          <button id="button" type="submit">Drop in!</button>
+        </form>
       </div>
       
     </div>
