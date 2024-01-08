@@ -50,7 +50,7 @@
         
         <form action="javascript: handleClick()">
           <div class="p-box">
-            <label class="p-label" for="paragraphs">Paragraphs:</label>
+            <label class="p-label" for="paragraph-num">Paragraphs:</label>
             <input id="paragraph-num" type="text" name="paragraphs" value="3" maxlength="2">
           </div>
 
@@ -58,16 +58,16 @@
             <p>Type:</p>
             <div class="types-opts">
               <div>
-                <input type="radio" name="type" value="surf" checked>
-                <label for="type">Clean, glassy surf</label>
+                <input type="radio" name="type" value="surf" id="surf" checked>
+                <label for="surf">Clean, glassy surf</label>
               </div>
               <div>
-                <input type="radio" name="type" value="latin">
-                <label for="type">Messy, mixed with latin</label>
+                <input type="radio" name="type" id="latin" value="latin">
+                <label for="latin">Messy, mixed with latin</label>
               </div>
               <div>
                 <input type="checkbox" name="sb" value="sb" id="checkbox" checked>
-                <label for="sb">Start with "Shaka Brah!"</label>
+                <label for="checkbox">Start with "Shaka Brah!"</label>
               </div>
             </div>
           </div>
