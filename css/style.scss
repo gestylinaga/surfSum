@@ -6,12 +6,12 @@
   font-family: 'Archive', sans-serif;
 }
 
-/* Dark Mode */
+// Dark Mode
 $bg: #11111b;
 $text: #cdd6f4;
 $blue: #89b4fa;
 
-/* Light Mode */
+// Light Mode 
 //$bg: #dce0e8;
 //$text: #4c4f69;
 //$blue: #1e66f5;
@@ -64,7 +64,7 @@ header {
     width: 50px;
     fill: $text;
   }
-  /* Aligns bottom of text with SVG */
+  // Aligns bottom of text with SVG 
   //> h1 {
   //  transform: translateY(35%);
   //}
@@ -79,6 +79,12 @@ header {
 
 p {
   font-size: 1.4rem;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.intro-text {
+  text-align: center;
 }
 
 #display {
@@ -138,6 +144,12 @@ input[type="checkbox"] {
 
 a {
   color: $blue;
+}
+
+.bottom-text {
+  @include flex-col;
+  text-align: center;
+  gap: 1.5rem;
 }
 
 .container {
