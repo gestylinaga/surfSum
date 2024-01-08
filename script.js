@@ -1,5 +1,6 @@
 // 🌊 surfSum
-console.log("Get pitted...sooo pitted!");
+console.log("Get pitted");
+console.log("...so pitted!");
 
 let latin = false;
 const display = document.getElementById("display");

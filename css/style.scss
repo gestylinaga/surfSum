@@ -6,15 +6,20 @@
   font-family: 'Archive', sans-serif;
 }
 
-// Dark Mode
-$bg: #11111b;
-$text: #cdd6f4;
-$blue: #89b4fa;
+// Default Light Mode
+:root {
+  --bg: #dce0e8;
+  --seconday: #eff1f5;
+  --text: #4c4f69;
+  --blue: #1e66f5;
+}
 
-// Light Mode 
-//$bg: #dce0e8;
-//$text: #4c4f69;
-//$blue: #1e66f5;
+.dark {
+  --bg: #11111b;
+  --seconday: #1e1e2e;
+  --text: #cdd6f4;
+  --blue: #89b4fa;
+}
 
 @mixin flex-col {
   display: flex;
@@ -24,8 +29,8 @@ $blue: #89b4fa;
 }
 
 body {
-  background-color: $bg;
-  color: $text;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .skip {
@@ -35,7 +40,7 @@ body {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  color: $text;
+  color: var(--text);
 
   &:focus {
     position: static;
@@ -57,24 +62,43 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $text;
+  color: var(--text);
   text-decoration: none;
   gap: 1rem;
   > svg {
     width: 50px;
-    fill: $text;
+    fill: var(--text);
   }
-  // Aligns bottom of text with SVG 
-  //> h1 {
-  //  transform: translateY(35%);
-  //}
 }
 
 .darkMode-toggle {
   background: none;
   border: none;
-  width: 50px;
-  fill: $text;
+}
+
+.sun,
+.moon {
+  position: absolute;
+  transform: translate(-100%, -50%);
+  fill: var(--text);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.sun {
+  opacity: 0;
+  width: 60px;
+}
+.dark .sun {
+  opacity: 1;
+}
+.moon {
+  opacity: 1;
+  width: 70px;
+}
+.dark .moon {
+  opacity: 0;
 }
 
 p {
@@ -123,27 +147,36 @@ form {
   width: 5rem;
   height: 1.5rem;
   align-self: center;
-  background-color: $text;
-  color: $bg;
+  background-color: var(--seconday);
+  color: var(--text);
   border-radius: 5px;
 }
-input {
-  background-color: $text;
-  color: $bg;
+.dark .form-button {
+  background-color: var(--text);
+  color: var(--bg);
+}
+.p-input {
+  background-color: var(--seconday);
+  color: var(--text);
   padding-left: 5px;
   padding-top: 5px;
+  padding-bottom: 5px;
+}
+.dark .p-input {
+  background-color: var(--text);
+  color: var(--bg);
 }
 input[type="radio"] {
-  accent-color: $blue;
-  background-color: $text;
+  accent-color: var(--blue);
+  background-color: var(--text);
 }
 input[type="checkbox"] {
-  accent-color: $blue;
-  background-color: $text;
+  accent-color: var(--blue);
+  background-color: var(--text);
 }
 
 a {
-  color: $blue;
+  color: var(--blue);
 }
 
 .bottom-text {
