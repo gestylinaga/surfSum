@@ -3,12 +3,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Archive', sans-serif;
 }
 
-//body {
-//  background: #000;
-//  color: #fff;
-//}
+/* Dark Mode */
+$bg: #11111b;
+$text: #cdd6f4;
+$blue: #89b4fa;
+
+/* Light Mode */
+//$bg: #dce0e8;
+//$text: #4c4f69;
+//$blue: #1e66f5;
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: $bg;
+  color: $text;
+}
 
 .skip {
   position: absolute;
@@ -17,6 +35,7 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+  color: $text;
 
   &:focus {
     position: static;
@@ -25,37 +44,104 @@
   }
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text;
+  text-decoration: none;
+  gap: 1rem;
+  > svg {
+    width: 50px;
+    fill: $text;
+  }
+  /* Aligns bottom of text with SVG */
+  //> h1 {
+  //  transform: translateY(35%);
+  //}
+}
+
+.darkMode-toggle {
+  background: none;
+  border: none;
+  width: 50px;
+  fill: $text;
+}
+
 p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 #display {
-  font-size: 1.5rem;
-  display: flex;
-  flex-direction: column;
+  @include flex-col;
+  font-size: 1.4rem;
   gap: 1rem;
   padding: 1em;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include flex-col;
   width: 100%;
   gap: 1em;
+  padding-bottom: 5rem;
 }
-
-button {
+.p-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.p-label {
+  transform: translateX(-15%);
+  font-size: 1.2rem;
+}
+.types-box {
+  display: flex;
+  gap: 3rem;
+}
+.types-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-button {
   width: 5rem;
   height: 1.5rem;
   align-self: center;
+  background-color: $text;
+  color: $bg;
+  border-radius: 5px;
+}
+input {
+  background-color: $text;
+  color: $bg;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+input[type="radio"] {
+  accent-color: $blue;
+  background-color: $text;
+}
+input[type="checkbox"] {
+  accent-color: $blue;
+  background-color: $text;
+}
+
+a {
+  color: $blue;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flex-col;
   gap: 2em;
   width: 100%;
   margin-right: auto;

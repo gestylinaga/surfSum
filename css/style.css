@@ -2,6 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Archive", sans-serif;
+}
+
+/* Dark Mode */
+/* Light Mode */
+body {
+  background-color: #11111b;
+  color: #cdd6f4;
 }
 
 .skip {
@@ -11,6 +19,7 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+  color: #cdd6f4;
 }
 .skip:focus {
   position: static;
@@ -18,14 +27,46 @@
   height: auto;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.home-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cdd6f4;
+  text-decoration: none;
+  gap: 1rem;
+  /* Aligns bottom of text with SVG */
+}
+.home-link > svg {
+  width: 50px;
+  fill: #cdd6f4;
+}
+
+.darkMode-toggle {
+  background: none;
+  border: none;
+  width: 50px;
+  fill: #cdd6f4;
+}
+
 p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 #display {
-  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
   gap: 1rem;
   padding: 1em;
 }
@@ -37,18 +78,67 @@ form {
   justify-content: center;
   width: 100%;
   gap: 1em;
+  padding-bottom: 5rem;
 }
 
-button {
+.p-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.p-label {
+  transform: translateX(-15%);
+  font-size: 1.2rem;
+}
+
+.types-box {
+  display: flex;
+  gap: 3rem;
+}
+
+.types-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-button {
   width: 5rem;
   height: 1.5rem;
   align-self: center;
+  background-color: #cdd6f4;
+  color: #11111b;
+  border-radius: 5px;
+}
+
+input {
+  background-color: #cdd6f4;
+  color: #11111b;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+input[type=radio] {
+  accent-color: #89b4fa;
+  background-color: #cdd6f4;
+}
+
+input[type=checkbox] {
+  accent-color: #89b4fa;
+  background-color: #cdd6f4;
+}
+
+a {
+  color: #89b4fa;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 2em;
   width: 100%;
   margin-right: auto;
